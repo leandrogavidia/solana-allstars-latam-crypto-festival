@@ -4,16 +4,41 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { usePathname } from 'next/navigation';
+import { SignUpButton } from "../sign-up-button";
 
 export function Header() {
     const path = usePathname();
     const [isOpen, setIsOpen] = useState(false)
 
+    const pathList = [
+        {
+            name: "Inicio",
+            path: "/",
+        },
+        {
+            name: "Agenda",
+            path: "/agenda",
+        },
+        {
+            name: "FAQ",
+            path: "/faq",
+        },
+        {
+            name: "Team",
+            path: "/team",
+        },
+        {
+            name: "Ubicación",
+            path: "/ubicacion",
+        },
+    ]
+
     useEffect(() => {
         setIsOpen(false)
     }, [path])
+
     return (
-        <header className="flex justify-between items-center gap-x-5 w-full p-5 fixed top-0 z-[100] bg-black">
+        <header className="flex justify-between items-center gap-x-5 w-full px-5 py-6 fixed top-0 z-[100] bg-black max-w-[1920px]">
             <Link href="/" className="cursor-pointer">
                 <Image
                     alt="Logo Solana Allstars Latam"
@@ -43,30 +68,19 @@ export function Header() {
             {
                 isOpen && (
                     <div className="w-full h-screen absolute top-0 right-0 z-40 bg-black flex flex-col justify-center items-center md:hidden">
-
                         <nav>
                             <ul className="flex flex-col gap-y-3 items-center">
-                                <li className="text-2xl hover:text-[#00f8b7] transition-all md:text-xl">
-                                    <Link href="/">Inicio</Link>
-                                </li>
-                                <li className="text-2xl hover:text-[#00f8b7] transition-all md:text-xl">
-                                    <Link href="/agenda">Agenda</Link>
-                                </li>
-                                <li className="text-2xl hover:text-[#00f8b7] transition-all md:text-xl">
-                                    <Link href="/faq">FAQ</Link>
-                                </li>
-                                <li className="text-2xl hover:text-[#00f8b7] transition-all md:text-xl">
-                                    <Link href="/team">Team</Link>
-                                </li>
-                                <li className="text-2xl hover:text-[#00f8b7] transition-all md:text-xl">
-                                    <Link href="/ubicacion">Ubicación</Link>
-                                </li>
+                                {
+                                    pathList.map(({ name, path }) => (
+                                        <li key={path} className="text-2xl hover:text-secondary transition-all md:text-xl">
+                                            <Link href={path}>{name}</Link>
+                                        </li>
+                                    ))
+                                }
                             </ul>
                         </nav>
 
-                        <Link href="https://get-in.com/en/crossroads" className="absolute bottom-6">
-                            <button className="rounded-full border border-[#00f8b7] text-white px-4 py-2 hover:bg-[#00f8b7] hover:text-black transition-all">OBTENER TICKETS</button>
-                        </Link>
+                        <SignUpButton className="absolute bottom-6" />
                     </div>
                 )
             }
@@ -74,27 +88,17 @@ export function Header() {
             <div className="hidden md:flex justify-between w-full items-center gap-x-5">
                 <nav>
                     <ul className="flex justify-start gap-x-3 items-center">
-                        <li className="text-2xl hover:text-[#00f8b7] transition-all md:text-xl">
-                            <Link href="/">Inicio</Link>
-                        </li>
-                        <li className="text-2xl hover:text-[#00f8b7] transition-all md:text-xl">
-                            <Link href="/agenda">Agenda</Link>
-                        </li>
-                        <li className="text-2xl hover:text-[#00f8b7] transition-all md:text-xl">
-                            <Link href="/faq">FAQ</Link>
-                        </li>
-                        <li className="text-2xl hover:text-[#00f8b7] transition-all md:text-xl">
-                            <Link href="/team">Team</Link>
-                        </li>
-                        <li className="text-2xl hover:text-[#00f8b7] transition-all md:text-xl">
-                            <Link href="/ubicacion">Ubicación</Link>
-                        </li>
+                        {
+                            pathList.map(({ name, path }) => (
+                                <li key={path} className="text-2xl hover:text-secondary transition-all md:text-xl">
+                                    <Link href={path}>{name}</Link>
+                                </li>
+                            ))
+                        }
                     </ul>
                 </nav>
 
-                <Link href="https://get-in.com/en/crossroads">
-                    <button className="rounded-full border border-[#00f8b7] text-white px-4 py-2 hover:bg-[#00f8b7] hover:text-black transition-all">OBTENER TICKETS</button>
-                </Link>
+                <SignUpButton />
             </div>
         </header>
     )

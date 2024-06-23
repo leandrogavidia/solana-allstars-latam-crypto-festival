@@ -29,13 +29,13 @@ export default function Faq() {
 
     return (
         <section className="mt-[140px] px-5">
-            <h1 className="text-3xl font-bold my-16 text-[#00f8b7]">Preguntas frecuentes</h1>
+            <h1 className="text-3xl font-bold my-16 text-secondary">Preguntas frecuentes</h1>
 
-            <div className="flex flex-col justify-center items-center gap-y-10">
+            <div className="flex flex-col justify-center gap-y-10 items-start">
                 {
                     questions.map(({ title, content }) => (
                         <div key={title} className="flex flex-col justify-center items-start gap-y-4">
-                            <h3 className="text-xl text-[#00f8b7] font-semibold">{title}</h3>
+                            <h3 className="text-xl text-secondary font-semibold">{title}</h3>
                             <p>{content}</p>
                             <div className="w-full h-[1px] bg-white opacity-20"></div>
                         </div>
