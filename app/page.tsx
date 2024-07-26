@@ -6,7 +6,7 @@ import { imageGallery } from "./image-gallery"
 export default function Home() {
 
 
-  const extraInfoList = ["1.500 Asistentes", "30+ Speakers", "1 Día"]
+  const extraInfoList = ["2.500+ Asistentes", "30+ Speakers", "1 Día"]
 
   return (
     <section>
@@ -22,15 +22,15 @@ export default function Home() {
       <div className="flex justify-center items-center gap-x-8 mt-10 px-5 mb-32">
         {
           extraInfoList.map(info => (
-            <div className="text-center bg-white rounded-full text-black w-full h-16 flex justify-center items-center font-semibold">
+            <div key={info} className="text-center bg-white rounded-full text-black w-full h-16 flex justify-center items-center font-semibold">
               <p>{info}</p>
             </div>
           ))
         }
       </div>
 
-      <div className="grid grid-cols-1 gap-10 md:grid-cols-2 justify-center items-center">
-        <div className="px-5 flex flex-col justify-center items-start gap-y-7">
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-2 justify-center items-center px-5">
+        <div className="flex flex-col justify-center items-start gap-y-7">
           <h2 className="text-3xl text-secondary font-semibold">Sobre LATAM Crypto Festival</h2>
           <p>
             ¡Únete al Latam Crypto Festival en Caracas, Venezuela! Este evento de un día, organizado por el equipo de Solana Allstars, está dedicado a impulsar la adopción de la blockchain de Solana en América Latina. </p>
@@ -47,6 +47,7 @@ export default function Home() {
         {
           imageGallery.sort(() => Math.random() - 0.5).map(({ name, path }) => (
             <Image
+              key={path}
               alt={name}
               src={path}
               width={300}

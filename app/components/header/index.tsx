@@ -5,40 +5,20 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 import { usePathname } from 'next/navigation';
 import { SignUpButton } from "../sign-up-button";
+import { pathList } from "./path-list";
 
 export function Header() {
-    const path = usePathname();
-    const [isOpen, setIsOpen] = useState(false)
+    const currentPath = usePathname();
+    const [isOpen, setIsOpen] = useState(false);
 
-    const pathList = [
-        {
-            name: "Inicio",
-            path: "/",
-        },
-        {
-            name: "Agenda",
-            path: "/agenda",
-        },
-        {
-            name: "FAQ",
-            path: "/faq",
-        },
-        {
-            name: "Team",
-            path: "/team",
-        },
-        {
-            name: "Ubicación",
-            path: "/ubicacion",
-        },
-    ]
+    const currentStylesPath = 'pointer-events-none cursor-default select-none hover:text-secondary after:!left-0 after:!bg-primary before:right-0 before:!bg-primary text-primary'
 
     useEffect(() => {
-        setIsOpen(false)
-    }, [path])
+        setIsOpen(false);
+    }, [currentPath])
 
     return (
-        <header className="flex justify-between items-center gap-x-5 w-full px-5 py-6 fixed top-0 z-[100] bg-black max-w-[1920px]">
+        <header className="flex justify-between items-center mx-auto gap-x-5 w-full px-5 py-6 fixed top-0 z-[100] bg-black max-w-[1920px] left-1/2 -translate-x-1/2 ">
             <Link href="/" className="cursor-pointer">
                 <Image
                     alt="Logo Solana Allstars Latam"
@@ -51,13 +31,13 @@ export function Header() {
 
             {
                 isOpen ? <Image
-                    className="relative z-50 md:hidden" onClick={() => setIsOpen(!isOpen)}
+                    className="relative z-50 md:hidden cursor-pointer" onClick={() => setIsOpen(!isOpen)}
                     alt="Menu abierto"
                     src={"/icons/x-icon.svg"}
                     width={32}
                     height={32}
                 /> : <Image
-                    className="relative z-50 md:hidden" onClick={() => setIsOpen(!isOpen)}
+                    className="relative z-50 md:hidden cursor-pointer" onClick={() => setIsOpen(!isOpen)}
                     alt="Menu abierto"
                     src={"/icons/menu-icon.svg"}
                     width={32}
@@ -72,7 +52,10 @@ export function Header() {
                             <ul className="flex flex-col gap-y-3 items-center">
                                 {
                                     pathList.map(({ name, path }) => (
-                                        <li key={path} className="text-2xl hover:text-secondary transition-all md:text-xl">
+                                        <li
+                                            key={path}
+                                            className="text-2xl hover:text-secondary transition-all md:text-xl"
+                                        >
                                             <Link href={path}>{name}</Link>
                                         </li>
                                     ))
@@ -90,7 +73,7 @@ export function Header() {
                     <ul className="flex justify-start gap-x-3 items-center">
                         {
                             pathList.map(({ name, path }) => (
-                                <li key={path} className="text-2xl hover:text-secondary transition-all md:text-xl">
+                                <li key={path} className={`overflow-hidden py-1 text-2xl transition-all md:text-xl hover:text-secondary relative after:content-[''] after:w-full after:h-[2px] after:bg-secondary after:absolute after:bottom-0 after:-left-full after:transition-all after:hover:left-0 before:content-[''] before:w-full before:h-[2px] before:bg-secondary before:absolute before:top-0 before:-right-full before:transition-all before:hover:right-0 ${currentPath === path ? currentStylesPath : ''}`}>
                                     <Link href={path}>{name}</Link>
                                 </li>
                             ))

@@ -1,46 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
 import { SignUpButton } from "../sign-up-button"
+import { sponsorList } from "./sponsor-list"
 
 export function Footer() {
-    const sponsorList = [
-        {
-            name: "Solana Allstars LATAM",
-            imagePath: "/images/logo-allstars-latam.png"
-        },
-        {
-            name: "Solana Allstars LATAM",
-            imagePath: "/images/logo-allstars-latam.png"
-        },
-        {
-            name: "Solana Allstars LATAM",
-            imagePath: "/images/logo-allstars-latam.png"
-        },
-        {
-            name: "Solana Allstars LATAM",
-            imagePath: "/images/logo-allstars-latam.png"
-        },
-        {
-            name: "Solana Allstars LATAM",
-            imagePath: "/images/logo-allstars-latam.png"
-        },
-        {
-            name: "Solana Allstars LATAM",
-            imagePath: "/images/logo-allstars-latam.png"
-        },
-        {
-            name: "Solana Allstars LATAM",
-            imagePath: "/images/logo-allstars-latam.png"
-        },
-        {
-            name: "Solana Allstars LATAM",
-            imagePath: "/images/logo-allstars-latam.png"
-        },
-    ]
-
     return (
-        <footer className="flex flex-col justify-between items-center gap-x-3 w-full gap-y-10 p-5 bg-black mt-20 max-w-[1920px]">
-            <h2 className="text-3xl self-start font-bold text-secondary">Partners</h2>
+        <footer className="flex flex-col justify-between mx-auto items-center gap-x-3 w-full gap-y-10 p-5 bg-black mt-20 max-w-[1920px]">
+            <h2 className="text-3xl self-start font-bold text-secondary">Sponsors</h2>
             <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-5 mx-auto justify-items-center">
                 {
                     sponsorList.map(({ imagePath, name }) => (
