@@ -198,4 +198,11 @@ export const team: Team[] = [
         imagePath: "https://pbs.twimg.com/profile_images/1804263448441745408/DOK4QA43_400x400.jpg",
         role: ROLE.COLABORADOR_A
     },
+    {
+        name: "Cata",
+        xUsername: "Cata_yanez179",
+        xUrl: "https://x.com/Cata_yanez179",
+        imagePath: "https://pbs.twimg.com/profile_images/1801359601943588864/YMrsZ1on_400x400.jpg",
+        role: ROLE.COLABORADOR_A
+    },
 ]

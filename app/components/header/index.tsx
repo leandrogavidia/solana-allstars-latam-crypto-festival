@@ -54,7 +54,7 @@ export function Header() {
                                     pathList.map(({ name, path }) => (
                                         <li
                                             key={path}
-                                            className="text-2xl hover:text-secondary transition-all md:text-xl"
+                                            className={`overflow-hidden py-1 text-2xl transition-all md:text-xl hover:text-secondary relative after:content-[''] after:w-full after:h-[2px] after:bg-secondary after:absolute after:bottom-0 after:-left-full after:transition-all after:hover:left-0 before:content-[''] before:w-full before:h-[2px] before:bg-secondary before:absolute before:top-0 before:-right-full before:transition-all before:hover:right-0 ${currentPath === path ? currentStylesPath : ''}`}
                                         >
                                             <Link href={path}>{name}</Link>
                                         </li>

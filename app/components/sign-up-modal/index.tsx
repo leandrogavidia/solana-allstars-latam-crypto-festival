@@ -5,7 +5,7 @@ import { useContext } from "react"
 import { ModalContext } from "@/app/modal-context"
 
 export function SignUpModal() {
-    const { isOpen, setIsOpen } = useContext(ModalContext)
+    const { isOpen, setIsOpen } = useContext(ModalContext);
     return (
         <>
             {
