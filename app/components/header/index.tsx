@@ -27,32 +27,35 @@ export function Header() {
       <Link href="/" className="cursor-pointer">
         <Image
           alt="Logo Solana Allstars Latam"
-          src={"/images/logo-test-3.jpg"}
+          src={"/images/logo.png"}
           width={2424}
           height={1055}
-          className="w-full h-auto max-w-[140px] relative z-50 "
+          className="w-full h-auto max-w-[60px] relative z-50 "
         />
       </Link>
 
-      {isOpen ? (
-        <Image
-          className="relative z-50 md:hidden cursor-pointer"
-          onClick={() => setIsOpen(!isOpen)}
-          alt="Menu abierto"
-          src={"/icons/x-icon.svg"}
-          width={32}
-          height={32}
-        />
-      ) : (
-        <Image
-          className="relative z-50 md:hidden cursor-pointer"
-          onClick={() => setIsOpen(!isOpen)}
-          alt="Menu abierto"
-          src={"/icons/menu-icon.svg"}
-          width={32}
-          height={32}
-        />
-      )}
+      <div className="flex justify-center items-center gap-x-5 md:hidden ">
+        <SolanaWalletButton />
+        {isOpen ? (
+          <Image
+            className="relative z-50 md:hidden cursor-pointer"
+            onClick={() => setIsOpen(!isOpen)}
+            alt="Menu abierto"
+            src={"/icons/x-icon.svg"}
+            width={32}
+            height={32}
+          />
+        ) : (
+          <Image
+            className="relative z-50 md:hidden cursor-pointer"
+            onClick={() => setIsOpen(!isOpen)}
+            alt="Menu abierto"
+            src={"/icons/menu-icon.svg"}
+            width={32}
+            height={32}
+          />
+        )}
+      </div>
 
       {isOpen && (
         <div className="w-full h-screen absolute top-0 right-0 z-40 bg-black flex flex-col justify-center items-center md:hidden">
@@ -75,6 +78,7 @@ export function Header() {
               ))}
             </ul>
           </nav>
+          
 
           <SignUpButton className="absolute bottom-6" />
         </div>
