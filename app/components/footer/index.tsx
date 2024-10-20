@@ -9,15 +9,17 @@ export function Footer() {
             <h2 className="text-3xl self-start font-bold text-secondary">Sponsors</h2>
             <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-5 mx-auto justify-items-center">
                 {
-                    sponsorList.map(({ imagePath, name }) => (
-                        <Image
-                            alt={name}
-                            src={imagePath}
-                            width={2424}
-                            height={1055}
-                            className="w-full h-auto max-w-[140px] relative z-50"
-                            key={name}
-                        />
+                    sponsorList.map(({ imagePath, name, link }) => (
+                        <Link href={link} target="_blank">
+                            <Image
+                                alt={name}
+                                src={imagePath}
+                                width={2424}
+                                height={1055}
+                                className="w-full h-auto max-w-[140px] relative z-50"
+                                key={name}
+                            />
+                        </Link>
                     ))
                 }
             </div>

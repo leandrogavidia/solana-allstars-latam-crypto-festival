@@ -29,7 +29,7 @@ export default function Faq() {
 
     return (
         <section className="mt-[140px] px-5">
-            <h1 className="text-3xl font-bold my-16 text-secondary">Preguntas frecuentes</h1>
+            {/* <h1 className="text-3xl font-bold my-16 text-secondary">Preguntas frecuentes</h1>
 
             <div className="flex flex-col justify-center gap-y-10 items-start">
                 {
@@ -41,7 +41,7 @@ export default function Faq() {
                         </div>
                     ))
                 }
-            </div>
+            </div> */}
         </section>
     );
 }

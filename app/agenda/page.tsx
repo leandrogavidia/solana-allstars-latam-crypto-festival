@@ -30,7 +30,7 @@ export default function Agenda() {
 
     return (
         <section className="mt-[140px] px-5">
-            <h1 className="text-3xl font-bold mt-16]"><span className="text-secondary">Agenda:</span> 31 de Agosto, 2024</h1>
+            {/* <h1 className="text-3xl font-bold mt-16]"><span className="text-secondary">Agenda:</span> 24 de Noviembre, 2024</h1>
 
             <div className="flex flex-col justify-center items-start gap-y-10 mt-16">
                 {
@@ -42,7 +42,7 @@ export default function Agenda() {
                         </div>
                     ))
                 }
-            </div>
+            </div> */}
         </section>
     );
 }
