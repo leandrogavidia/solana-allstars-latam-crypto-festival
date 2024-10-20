@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { SignUpButton } from "../sign-up-button";
 import { pathList } from "./path-list";
+import { SolanaWalletButton } from "../solana-wallet-button";
 
 export function Header() {
   const currentPath = usePathname();
@@ -101,7 +102,10 @@ export function Header() {
           </ul>
         </nav>
 
-        <SignUpButton />
+        <div className="flex justify-center items-center gap-x-5">
+            <SignUpButton />
+            <SolanaWalletButton />
+        </div>
       </div>
     </header>
   );

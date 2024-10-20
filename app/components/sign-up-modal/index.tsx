@@ -30,12 +30,42 @@ export function SignUpModal() {
                             <h3 className="text-2xl font-semibold">¡Registrate al <span className="text-secondary">LATAM Crypto Festival</span>!</h3>
                             <form className="flex flex-col justify-center items-start gap-5 w-full">
                                 <div className="flex flex-col justify-center items-start gap-2 w-full">
+                                    <label htmlFor="full-name">Nombre completo <span className="text-red-600">*</span></label>
+                                    <input
+                                        type="text"
+                                        id="full-name"
+                                        name="full-name"
+                                        placeholder="e.g. Juan Perez"
+                                        className="w-full bg-zinc-900 rounded-xl h-9 outline-none px-3 text-sm border-zinc-700 border-1 focus:outline-secondary placeholder:text-zinc-700 focus:bg-zinc-950"
+                                    />
+                                </div>
+                                <div className="flex flex-col justify-center items-start gap-2 w-full">
                                     <label htmlFor="phone">Telefono <span className="text-red-600">*</span></label>
                                     <input
                                         type="tel"
                                         id="phone"
                                         name="phone"
-                                        placeholder="+58 412 1234567"
+                                        placeholder="e.g. +58 412 1234567"
+                                        className="w-full bg-zinc-900 rounded-xl h-9 outline-none px-3 text-sm border-zinc-700 border-1 focus:outline-secondary placeholder:text-zinc-700 focus:bg-zinc-950"
+                                    />
+                                </div>
+                                <div className="flex flex-col justify-center items-start gap-2 w-full">
+                                    <label htmlFor="email">Correo electrónico<span className="text-red-600">*</span></label>
+                                    <input
+                                        type="tel"
+                                        id="email"
+                                        name="email"
+                                        placeholder="e.g. latamcrypto@gmail.com"
+                                        className="w-full bg-zinc-900 rounded-xl h-9 outline-none px-3 text-sm border-zinc-700 border-1 focus:outline-secondary placeholder:text-zinc-700 focus:bg-zinc-950"
+                                    />
+                                </div>
+                                <div className="flex flex-col justify-center items-start gap-2 w-full">
+                                    <label htmlFor="email">¿Tienes algun problema para trasladarte al evento?<span className="text-red-600">*</span></label>
+                                    <input
+                                        type="tel"
+                                        id="email"
+                                        name="email"
+                                        placeholder="e.g. No"
                                         className="w-full bg-zinc-900 rounded-xl h-9 outline-none px-3 text-sm border-zinc-700 border-1 focus:outline-secondary placeholder:text-zinc-700 focus:bg-zinc-950"
                                     />
                                 </div>
@@ -45,14 +75,14 @@ export function SignUpModal() {
                                         type="text"
                                         id="country"
                                         name="country"
-                                        placeholder="Venezuela"
+                                        placeholder="e.g. Venezuela"
                                         className="w-full bg-zinc-900 rounded-xl h-9 outline-none px-3 text-sm border-zinc-700 border-1 focus:outline-secondary placeholder:text-zinc-700 focus:bg-zinc-950"
                                     />
                                 </div>
                                 <button
                                     type="submit"
                                     className="w-full h-10 rounded-full font-semibold border border-primary text-primary text-base hover:bg-primary hover:text-black transition-all"
-                                >Registrarse</button>
+                                >Confirmar</button>
                             </form>
                         </div>
                     </div>

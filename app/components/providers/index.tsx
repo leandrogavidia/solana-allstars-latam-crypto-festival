@@ -6,13 +6,16 @@ import {
 } from "@solana/wallet-adapter-react";
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import { WalletError } from "@solana/wallet-adapter-base";
-import React, { useCallback } from "react";
+import { SolflareWalletAdapter } from "@solana/wallet-adapter-wallets";
+import React, { useCallback, useMemo } from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 require("@solana/wallet-adapter-react-ui/styles.css");
 
 if (!process.env.NEXT_PUBLIC_RPC) {
-  throw new Error("Missing NEXT_PUBLIC_RPC env variables. Check .env.examples file")
+  throw new Error(
+    "Missing NEXT_PUBLIC_RPC env variables. Check .env.examples file"
+  );
 }
 
 export default function Providers(props: React.PropsWithChildren) {
@@ -21,9 +24,11 @@ export default function Providers(props: React.PropsWithChildren) {
     console.error(error);
   }, []);
 
+  const wallets = useMemo(() => [new SolflareWalletAdapter()], []);
+
   return (
     <ConnectionProvider endpoint={endpoint}>
-      <WalletProvider wallets={[]} onError={onError} autoConnect>
+      <WalletProvider wallets={wallets} onError={onError} autoConnect>
         <WalletModalProvider>{props.children}</WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>
