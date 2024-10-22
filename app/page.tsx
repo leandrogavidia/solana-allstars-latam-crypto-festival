@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <section>
-      <div className="w-full h-auto min-h-[400px] bg-custom-image flex justify-center text-center items-center flex-col gap-y-5 p-10 mt-[92px]">
+      <div className="w-full h-auto min-h-[440px] bg-custom-image flex justify-center text-center items-center flex-col gap-y-5 p-10 mt-[92px]">
         <p className="font-semibold z-30">Caracas, Venezuela • 24 de Noviembre, 2024</p>
         <h1 className="text-4xl font-bold z-30">Solana Allstars LATAM Crypto Festival</h1>
         <h2 className="z-30 font-semibold text-xl">¡100% GRATUITO!</h2>
