@@ -1,5 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
+import Image from "next/image"
 
 const WalletIcon = () => (
   <svg width={12} height={14} viewBox="0 0 12 14" fill="none">
@@ -13,7 +14,14 @@ const WalletIcon = () => (
 const CONNECT_WALLET = (
   <>
     <div className="flex flex-row items-center justify-center gap-3 text-sm">
-      <WalletIcon />
+      <Image
+        alt="Solflare"
+        title="Solflare"
+        width={512}
+        height={512}
+        src={"/images/solflare.png"}
+        className="h-auto w-full max-w-6"
+      />
       Conectar Wallet
     </div>
   </>
@@ -39,6 +47,21 @@ export const SolanaWalletButton = () => {
     <div className={"flex max-h-10 min-h-10 items-center justify-center"}>
       {/*@ts-expect-error labels type*/}
       <BaseWalletMultiButton labels={LABELS} />
+    </div>
+  );
+};
+
+const BaseWalletMultiModal = dynamic(
+  async () =>
+    (await import("@solana/wallet-adapter-react-ui")).WalletModal,
+  { ssr: false }
+);
+
+export const SolflareWalletModal = () => {
+  return (
+    <div className={"flex max-h-10 min-h-10 items-center justify-center"}>
+      {/*@ts-expect-error labels type*/}
+      <BaseWalletMultiModal labels={LABELS} />aaaaa
     </div>
   );
 };

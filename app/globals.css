@@ -34,3 +34,15 @@ body {
   border-radius: 9999px;
   color:  #ffbb1d;
 }
+
+.wallet-adapter-modal-list > li {
+  display: none;
+}
+
+.wallet-adapter-modal-list > li:has(button > i > img[alt="Solflare icon"]) {
+  display: list-item;
+}
+
+.wallet-adapter-modal-wrapper {
+  background-color: #1f1f1f;
+}

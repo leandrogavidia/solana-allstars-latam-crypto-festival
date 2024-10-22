@@ -83,8 +83,6 @@ export function SignUpModal() {
             },
         });
     
-        console.log(response)
-
         setIsLoading(false)
         setIsConfirmed(true)
     } catch (e) {
@@ -92,7 +90,6 @@ export function SignUpModal() {
         setIsLoading(false)
     }
   };
-  console.log("errors: ", errors);
   return (
     <>
       {isOpen ? (

@@ -22,6 +22,7 @@ export function Header() {
     setIsOpen(false);
   }, [currentPath]);
 
+
   return (
     <header className="flex justify-between items-center mx-auto gap-x-5 w-full px-5 py-6 fixed top-0 z-[100] bg-black max-w-[1920px] left-1/2 -translate-x-1/2 ">
       <Link href="/" className="cursor-pointer">
@@ -30,7 +31,14 @@ export function Header() {
           src={"/images/logo.png"}
           width={2424}
           height={1055}
-          className="w-full h-auto max-w-[60px] relative z-50 "
+          className="w-full h-auto max-w-[48px] relative z-50 block sm:hidden"
+        />
+        <Image
+          alt="Logo Solana Allstars Latam"
+          src={"/images/logo-desktop.png"}
+          width={2424}
+          height={1055}
+          className="w-full h-auto max-w-[120px] relative z-50 hidden sm:block"
         />
       </Link>
 

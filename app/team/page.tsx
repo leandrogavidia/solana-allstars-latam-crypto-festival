@@ -6,7 +6,7 @@ export default function Team() {
   return (
     <section className="mt-[140px] px-5">
       <h1 className="text-3xl font-bold text-white my-16">
-        Team Solana Allstars Venezuela
+        Team Solana Allstars LATAM
       </h1>
       {roleList.map((role) => (
         <div key={role}>

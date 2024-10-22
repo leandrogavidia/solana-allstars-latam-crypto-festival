@@ -10,7 +10,7 @@ export function Footer() {
             <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-5 mx-auto justify-items-center">
                 {
                     sponsorList.map(({ imagePath, name, link }) => (
-                        <Link href={link} target="_blank">
+                        <Link key={imagePath} href={link} target="_blank">
                             <Image
                                 alt={name}
                                 src={imagePath}
@@ -29,7 +29,7 @@ export function Footer() {
             <Link href="/">
                 <Image
                     alt="Logo Solana Allstars Latam"
-                    src="/images/logo-allstars-latam.png"
+                    src="/images/logo-desktop.png"
                     width={2424}
                     height={1055}
                     className="w-full h-auto max-w-[140px] relative z-50"

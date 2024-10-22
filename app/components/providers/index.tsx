@@ -6,8 +6,9 @@ import {
 } from "@solana/wallet-adapter-react";
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import { WalletError } from "@solana/wallet-adapter-base";
-import { SolflareWalletAdapter } from "@solana/wallet-adapter-wallets";
+import { SolflareWalletAdapter,  } from '@solana/wallet-adapter-solflare';
 import React, { useCallback, useMemo } from "react";
+import { clusterApiUrl } from "@solana/web3.js";
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 require("@solana/wallet-adapter-react-ui/styles.css");
@@ -20,11 +21,14 @@ if (!process.env.NEXT_PUBLIC_RPC) {
 
 export default function Providers(props: React.PropsWithChildren) {
   const endpoint = process.env.NEXT_PUBLIC_RPC || "";
+
+  const wallets = useMemo(() => [
+    new SolflareWalletAdapter(),
+  ], [endpoint]);
+
   const onError = useCallback((error: WalletError) => {
     console.error(error);
   }, []);
-
-  const wallets = useMemo(() => [new SolflareWalletAdapter()], []);
 
   return (
     <ConnectionProvider endpoint={endpoint}>

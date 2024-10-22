@@ -1,5 +1,5 @@
 enum ROLE {
-  GLOBAL_MANAGER = "Global Manager",
+  // GLOBAL_MANAGER = "Global Manager",
   COUNTRY_MANAGER = "Country Manager",
   REGIONAL_MANAGER = "Regional Manager",
 //   EMBAJADOR_A = "Embajador/a",
@@ -7,7 +7,7 @@ enum ROLE {
 }
 
 export const roleList = [
-  ROLE.GLOBAL_MANAGER,
+  // ROLE.GLOBAL_MANAGER,
   ROLE.COUNTRY_MANAGER,
   ROLE.REGIONAL_MANAGER,
 //   ROLE.EMBAJADOR_A,
@@ -23,20 +23,20 @@ interface Team {
 }
 
 export const team: Team[] = [
-  {
-    name: "Theptilla",
-    xUsername: "Theptilla",
-    xUrl: "https://x.com/Theptilla",
-    imagePath:
-      "https://pbs.twimg.com/profile_images/1650310622448439298/D7gcXUGB_400x400.jpg",
-    role: ROLE.GLOBAL_MANAGER,
-  },
+  // {
+  //   name: "Theptilla",
+  //   xUsername: "Theptilla",
+  //   xUrl: "https://x.com/Theptilla",
+  //   imagePath:
+  //     "https://pbs.twimg.com/profile_images/1650310622448439298/D7gcXUGB_400x400.jpg",
+  //   role: ROLE.GLOBAL_MANAGER,
+  // },
   {
     name: "Jesus Silva - Venezuela",
     xUsername: "elchuo160",
     xUrl: "https://x.com/elchuo160",
     imagePath:
-      "https://pbs.twimg.com/profile_images/1796250481833996288/sntT-I6i_400x400.jpg",
+      "/images/team/elchuo160.png",
     role: ROLE.COUNTRY_MANAGER,
   },
   {
@@ -44,7 +44,7 @@ export const team: Team[] = [
     xUsername: "SOLWookie",
     xUrl: "https://x.com/solwookie",
     imagePath:
-      "https://pbs.twimg.com/profile_images/1742222629778440199/Sv9a_DO-_400x400.jpg",
+      "/images/team/SOLWookie.png",
     role: ROLE.COUNTRY_MANAGER,
   },
   {
@@ -52,7 +52,7 @@ export const team: Team[] = [
     xUsername: "soymaikoldev",
     xUrl: "https://x.com/soymaikoldev",
     imagePath:
-      "https://pbs.twimg.com/profile_images/1765002596970901504/cwQ49ZVK_400x400.jpg",
+      "/images/team/soymaikoldev.png",
     role: ROLE.REGIONAL_MANAGER,
   },
   {
@@ -60,7 +60,7 @@ export const team: Team[] = [
     xUsername: "YuneHRI6",
     xUrl: "https://x.com/YuneHRI6",
     imagePath:
-      "https://pbs.twimg.com/profile_images/1777040570893881344/RZKAMaiz_400x400.jpg",
+      "/images/team/YuneHRI6.png",
     role: ROLE.COLABORADOR_A,
   },
   {
@@ -68,7 +68,7 @@ export const team: Team[] = [
     xUsername: "lauqch",
     xUrl: "https://x.com/lauqch",
     imagePath:
-      "https://pbs.twimg.com/profile_images/1727860386303455232/Fy8NC8GH_400x400.jpg",
+      "/images/team/lauqch.png",
     role: ROLE.COLABORADOR_A,
   },
   {
@@ -84,7 +84,7 @@ export const team: Team[] = [
     xUsername: "kailybv",
     xUrl: "https://x.com/kailybv",
     imagePath:
-      "https://pbs.twimg.com/profile_images/1796352473172434944/NABRtg5i_400x400.jpg",
+      "/images/team/kailybv.png",
     role: ROLE.REGIONAL_MANAGER,
   },
   {
@@ -98,9 +98,9 @@ export const team: Team[] = [
   {
     name: "Andersón Mendez",
     xUsername: "Criptodruu",
-    xUrl: "https://x.com/AriCR18",
+    xUrl: "https://x.com/Criptodruu",
     imagePath:
-      "https://pbs.twimg.com/profile_images/1806864282048438272/XOBcXvUE_400x400.jpg",
+      "/images/team/Criptodruu.png",
     role: ROLE.REGIONAL_MANAGER,
   },
   {
@@ -124,7 +124,7 @@ export const team: Team[] = [
     xUsername: "cryptoyorman",
     xUrl: "https://x.com/cryptoyorman",
     imagePath:
-      "https://pbs.twimg.com/profile_images/1802884655193980928/Sic4ssYL_400x400.jpg",
+      "/images/team/cryptoyorman.png",
     role: ROLE.REGIONAL_MANAGER,
   },
   {
@@ -148,7 +148,7 @@ export const team: Team[] = [
     xUsername: "Yorbin_Gelves",
     xUrl: "https://x.com/Yorbin_Gelves",
     imagePath:
-      "https://pbs.twimg.com/profile_images/1497470971753766912/7hDGapgd_400x400.jpg",
+      "/images/team/Yorbin_Gelves.png",
     role: ROLE.REGIONAL_MANAGER,
   },
   {
@@ -172,7 +172,7 @@ export const team: Team[] = [
     xUsername: "XRei_investor",
     xUrl: "https://x.com/XRei_investor",
     imagePath:
-      "https://pbs.twimg.com/profile_images/1794793850571001857/PCTCh95M_400x400.jpg",
+      "/images/team/XRei_investor.png",
     role: ROLE.COLABORADOR_A,
   },
   {
@@ -220,7 +220,7 @@ export const team: Team[] = [
     xUsername: "lililuki1",
     xUrl: "https://x.com/lililuki1",
     imagePath:
-      "https://pbs.twimg.com/profile_images/1800621033172373504/tZVSYWaj_400x400.jpg",
+      "/images/team/lililuki1.png",
     role: ROLE.COLABORADOR_A,
   },
   {
@@ -268,7 +268,7 @@ export const team: Team[] = [
     xUsername: "",
     xUrl: "",
     imagePath:
-      "",
+      "/images/team/default.png",
     role: ROLE.COLABORADOR_A,
   },
   {
@@ -364,7 +364,7 @@ export const team: Team[] = [
     xUsername: "",
     xUrl: "",
     imagePath:
-      "",
+      "/images/team/default.png",
     role: ROLE.COLABORADOR_A,
   },
   {
@@ -372,7 +372,7 @@ export const team: Team[] = [
     xUsername: "",
     xUrl: "",
     imagePath:
-      "",
+      "/images/team/default.png",
     role: ROLE.COLABORADOR_A,
   },
   {
@@ -380,7 +380,7 @@ export const team: Team[] = [
     xUsername: "",
     xUrl: "",
     imagePath:
-      "",
+      "/images/team/default.png",
     role: ROLE.COLABORADOR_A,
   },
   {
@@ -388,7 +388,7 @@ export const team: Team[] = [
     xUsername: "",
     xUrl: "",
     imagePath:
-      "",
+      "/images/team/default.png",
     role: ROLE.COLABORADOR_A,
   },
   {
@@ -420,7 +420,7 @@ export const team: Team[] = [
     xUsername: "",
     xUrl: "",
     imagePath:
-      "",
+      "/images/team/default.png",
     role: ROLE.COLABORADOR_A,
   },
   {
@@ -444,7 +444,7 @@ export const team: Team[] = [
     xUsername: "turbobitx",
     xUrl: "https://x.com/turbobitx",
     imagePath:
-      "",
+      "/images/team/default.png",
     role: ROLE.COLABORADOR_A,
   },
   {
@@ -468,7 +468,7 @@ export const team: Team[] = [
     xUsername: "",
     xUrl: "",
     imagePath:
-      "",
+      "/images/team/default.png",
     role: ROLE.COLABORADOR_A,
   },
   {
