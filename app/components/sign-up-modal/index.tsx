@@ -172,7 +172,7 @@ export function SignUpModal() {
                 </label>
                 <input
                   {...register("translation_issue", { required: false })}
-                  type="tel"
+                  type="text"
                   id="translation_issue"
                   placeholder="e.g. No"
                   className="w-full bg-zinc-900 rounded-xl h-9 outline-none px-3 text-sm border-zinc-700 border-1 focus:outline-secondary placeholder:text-zinc-700 focus:bg-zinc-950"

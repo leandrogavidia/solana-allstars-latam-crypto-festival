@@ -15,12 +15,21 @@ body {
   z-index: 10;
 }
 
+.bg-custom-image-gif {
+  background-image: url('../public/images/cover-1.gif');
+  background-size: cover;
+  background-position: center center; 
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 10;
+}
+
 .bg-custom-image::after {
   content: "";
   width: 100%;
   height: 100%;
   background: black;
-  opacity: 0.5;
+  opacity: 0.7;
   position: absolute;
   top: 0;
   bottom: 0;
