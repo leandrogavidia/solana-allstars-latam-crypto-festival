@@ -32,7 +32,7 @@ const LABELS = {
   "copy-address": "Copiar dirección",
   copied: "Copiada",
   disconnect: "Desconectar",
-  "has-wallet": "Connectar",
+  "has-wallet": "Conectar",
   "no-wallet": CONNECT_WALLET,
 } as const;
 

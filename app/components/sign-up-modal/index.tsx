@@ -22,7 +22,11 @@ export function SignUpModal() {
       phone: "",
       email: "",
       translation_issue: "",
+      why: "",
+      work_web3: "",
+      what_do_you_do: "",
       solana_wallet: publicKey?.toString(),
+
     },
   });
 
@@ -60,7 +64,25 @@ export function SignUpModal() {
                     "label": "Solana Wallet",
                     "question_id": "cnnbic9p",
                     "question_type": "text"
-                }
+                },
+                {
+                  "answer": data.why,
+                  "label": "¿Por qué quieres asistir a este evento?",
+                  "question_id": "b6zn7dmg",
+                  "question_type": "dropdown"
+                },
+                {
+                  "answer": data.work_web3,
+                  "label": "¿Trabajas actualmente en web3?",
+                  "question_id": "gn1u2qus",
+                  "question_type": "dropdown"
+                },
+                {
+                  "answer": data.what_do_you_do,
+                  "label": "¿A qué te dedicas?",
+                  "question_id": "3gplh51d",
+                  "question_type": "text"
+              }
             ],
             "solana_address": publicKey?.toString(),
             "solana_address_info": null,
@@ -82,9 +104,13 @@ export function SignUpModal() {
                 "x-luma-api-key": process.env.NEXT_PUBLIC_LUMA_SECRET_KEY || ""
             },
         });
-    
-        setIsLoading(false)
-        setIsConfirmed(true)
+
+        console.log(response)
+
+        if (response) {
+          setIsLoading(false)
+          setIsConfirmed(true)
+        }
     } catch (e) {
         console.error("Error:", e)
         setIsLoading(false)
@@ -122,7 +148,7 @@ export function SignUpModal() {
               className="flex flex-col justify-start items-start gap-5 w-full"
             >
               <div className="flex flex-col justify-center items-start gap-2 w-full">
-                <label htmlFor="full-name">
+                <label htmlFor="fullname">
                   Nombre completo <span className="text-red-600">*</span>
                 </label>
                 <input
@@ -167,7 +193,7 @@ export function SignUpModal() {
                 </span>
               </div>
               <div className="flex flex-col justify-center items-start gap-2 w-full">
-                <label htmlFor="translation-issue">
+                <label htmlFor="translation_issue">
                   ¿Tienes algun problema para trasladarte al evento?
                 </label>
                 <input
@@ -178,8 +204,54 @@ export function SignUpModal() {
                   className="w-full bg-zinc-900 rounded-xl h-9 outline-none px-3 text-sm border-zinc-700 border-1 focus:outline-secondary placeholder:text-zinc-700 focus:bg-zinc-950"
                 />
               </div>
+
               <div className="flex flex-col justify-center items-start gap-2 w-full">
-                <label htmlFor="country">
+                <label htmlFor="why">
+                  ¿Por qué quieres asistir a este evento?
+                </label>
+                <select
+                  {...register("why", { required: false })}
+                  id="why"
+                  className="w-full bg-zinc-900 rounded-xl h-9 outline-none px-3 text-sm border-zinc-700 border-1 focus:outline-secondary placeholder:text-zinc-700 focus:bg-zinc-950"
+                >
+                  <option value="" selected>Selecciona una opción</option>
+                  <option value="Quiero construir un proyecto web3">Quiero construir un proyecto web3</option>
+                  <option value="Estoy buscando trabajo en la web3">Estoy buscando trabajo en la web3</option>
+                  <option value="Quiero aprender sobre crypto">Quiero aprender sobre crypto</option>
+                  <option value="Quiero conectar con otros entusiastas">Quiero conectar con otros entusiastas</option>
+                </select>
+              </div>
+
+              <div className="flex flex-col justify-center items-start gap-2 w-full">
+                <label htmlFor="work_web3">
+                  ¿Trabajas actualmente en web3?
+                </label>
+                <select
+                  {...register("work_web3", { required: false })}
+                  id="work_web3"
+                  className="w-full bg-zinc-900 rounded-xl h-9 outline-none px-3 text-sm border-zinc-700 border-1 focus:outline-secondary placeholder:text-zinc-700 focus:bg-zinc-950"
+                >
+                  <option value="" selected>Selecciona una opción</option>
+                  <option value="Sí">Sí</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+
+              <div className="flex flex-col justify-center items-start gap-2 w-full">
+                <label htmlFor="what_do_you_do">
+                  ¿A qué te dedicas?
+                </label>
+                <input
+                  {...register("what_do_you_do", { required: false })}
+                  type="text"
+                  id="what_do_you_do"
+                  placeholder="e.g. No"
+                  className="w-full bg-zinc-900 rounded-xl h-9 outline-none px-3 text-sm border-zinc-700 border-1 focus:outline-secondary placeholder:text-zinc-700 focus:bg-zinc-950"
+                />
+              </div>
+
+              <div className="flex flex-col justify-center items-start gap-2 w-full">
+                <label htmlFor="solana_wallet">
                   Solana Wallet <span className="text-red-600">*</span>
                 </label>
                 <input
