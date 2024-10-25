@@ -8,7 +8,6 @@ import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import { WalletError } from "@solana/wallet-adapter-base";
 import { SolflareWalletAdapter,  } from '@solana/wallet-adapter-solflare';
 import React, { useCallback, useMemo } from "react";
-import { clusterApiUrl } from "@solana/web3.js";
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 require("@solana/wallet-adapter-react-ui/styles.css");

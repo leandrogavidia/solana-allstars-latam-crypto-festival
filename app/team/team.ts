@@ -76,7 +76,7 @@ export const team: Team[] = [
     xUsername: "valvalentina24",
     xUrl: "https://x.com/valvalentina24",
     imagePath:
-      "https://pbs.twimg.com/profile_images/1731813055221084160/G9dh3ojv_400x400.jpg",
+      "/images/team/valvalentina24.png",
     role: ROLE.COLABORADOR_A,
   },
   {
@@ -88,11 +88,19 @@ export const team: Team[] = [
     role: ROLE.REGIONAL_MANAGER,
   },
   {
+    name: "Jesus Parra",
+    xUsername: "cryptojesus32",
+    xUrl: "https://x.com/cryptojesus32",
+    imagePath:
+      "/images/team/cryptojesus32.png",
+    role: ROLE.REGIONAL_MANAGER,
+  },
+  {
     name: "Arianna Cabrera",
     xUsername: "AriCR18",
     xUrl: "https://x.com/AriCR18",
     imagePath:
-      "https://pbs.twimg.com/profile_images/1733191053438541824/Yos4FWvB_400x400.jpg",
+      "/images/team/AriCR18.png",
     role: ROLE.COLABORADOR_A,
   },
   {
@@ -101,14 +109,14 @@ export const team: Team[] = [
     xUrl: "https://x.com/Criptodruu",
     imagePath:
       "/images/team/Criptodruu.png",
-    role: ROLE.REGIONAL_MANAGER,
+    role: ROLE.COLABORADOR_A,
   },
   {
     name: "Estefani Arzola",
-    xUsername: "arzkyu_97",
-    xUrl: "https://x.com/arzkyu_97",
+    xUsername: "arzkyu97_",
+    xUrl: "https://x.com/arzkyu97_",
     imagePath:
-      "https://pbs.twimg.com/profile_images/1584910748538601472/hkXVLIS7_400x400.jpg",
+      "/images/team/arzkyu97_.png",
     role: ROLE.COLABORADOR_A,
   },
   {
@@ -116,7 +124,7 @@ export const team: Team[] = [
     xUsername: "CrypTravels",
     xUrl: "https://x.com/CrypTravels",
     imagePath:
-      "https://pbs.twimg.com/profile_images/1789282449412734976/Y-pSQsbA_400x400.jpg",
+      "/images/team/CrypTravels.png",
     role: ROLE.COLABORADOR_A,
   },
   {
@@ -132,7 +140,7 @@ export const team: Team[] = [
     xUsername: "jhonnyjohnson",
     xUrl: "https://x.com/jhonnyjohnson",
     imagePath:
-      "https://pbs.twimg.com/profile_images/1628936191620837376/TPtyQmrA_400x400.jpg",
+      "/images/team/jhonnyjohnson.png",
     role: ROLE.COLABORADOR_A,
   },
   {
@@ -140,7 +148,7 @@ export const team: Team[] = [
     xUsername: "androgavidia",
     xUrl: "https://x.com/androgavidia",
     imagePath:
-      "https://pbs.twimg.com/profile_images/1792739864904957952/9V9SSzlt_400x400.jpg",
+      "/images/team/androgavidia.png",
     role: ROLE.COLABORADOR_A,
   },
   {
@@ -156,7 +164,7 @@ export const team: Team[] = [
     xUsername: "skyempire90",
     xUrl: "https://x.com/skyempire90",
     imagePath:
-      "https://pbs.twimg.com/profile_images/1730285118265204736/8Io_-V8e_400x400.jpg",
+      "/images/team/skyempire90.png",
     role: ROLE.COLABORADOR_A,
   },
   {
@@ -445,14 +453,6 @@ export const team: Team[] = [
     xUrl: "https://x.com/turbobitx",
     imagePath:
       "/images/team/default.png",
-    role: ROLE.COLABORADOR_A,
-  },
-  {
-    name: "Gabriel Goitia",
-    xUsername: "gagv00",
-    xUrl: "https://x.com/gagv00",
-    imagePath:
-      "https://pbs.twimg.com/profile_images/1820146300408459264/t5Le0Xvb_400x400.jpg",
     role: ROLE.COLABORADOR_A,
   },
   {
